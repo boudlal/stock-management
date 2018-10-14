@@ -35,7 +35,7 @@
                         <strong>Edit Client</strong>
                     </div>
                     <div class="card-body card-block">
-                        {!! Form::model($client, ['url' => url('/client/update/'.$client->id), 'method' => 'patch']) !!}
+                        {!! Form::model($client, ['url' => route('clients.update', $client->id), 'method' => 'patch']) !!}
                         @include('admin.clients.form')
                         {!! Form::close() !!}
 

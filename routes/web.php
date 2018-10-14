@@ -31,12 +31,12 @@ Route::group(["middleware" => "auth"], function (){
 
 
     //clients
-    Route::get('/clients', 'ClientController@allClients');
-    Route::get('/clients/add', 'ClientController@createClient');
-    Route::post('/clients/add', 'ClientController@storeClient');
-    Route::get('/client/edit/{id}', 'ClientController@editClient');
-    Route::patch('/client/update/{id}', 'ClientController@updateClient');
-    Route::get('/client/delete/{id}', 'ClientController@destroyClient');
+    Route::get('/clients', 'ClientController@index')->name('clients.index');
+    Route::get('/clients/create', 'ClientController@create')->name('clients.create');
+    Route::post('/clients/create', 'ClientController@store')->name('clients.store');
+    Route::get('/clients/edit/{id}', 'ClientController@edit')->name('clients.edit');
+    Route::patch('/clients/update/{id}', 'ClientController@update')->name('clients.update');
+    Route::delete('/clients/delete/{id}', 'ClientController@destroy')->name('clients.destroy');
 
     //providers
     Route::get('/providers', 'ProviderController@allProviders');

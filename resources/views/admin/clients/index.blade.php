@@ -71,8 +71,10 @@
                                         <td>{{ $client->city }}</td>
                                         <td>{{ clientStatus()[$client->status] }}</td>
                                         <td>
-                                            <a href="{{ url('/client/edit/'.$client->id) }}"><button class="btn btn-primary btn-sm">Edit</button></a>
-                                            <a href="{{ url('/client/delete/'.$client->id) }}"><button class="btn btn-danger btn-sm">Delete</button></a>
+                                            <a href="{{ route('clients.edit', $client->id) }}"><button class="btn btn-primary btn-sm">Edit</button></a>
+                                            {!! Form::model($client, ['url' => route('clients.destroy', $client->id), 'method' => 'delete', 'style' => 'display:inline-block;']) !!}
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            {!! Form::close() !!}
                                         </td>
                                     </tr>
                                      @endforeach

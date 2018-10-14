@@ -29,8 +29,8 @@
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-user"></i>Clients</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-table"></i><a href="{{ url('clients') }}">All clients</a></li>
-                        <li><i class="fa fa-plus-square"></i><a href="{{ url('clients/add') }}">Add a new client</a></li>
+                        <li><i class="fa fa-table"></i><a href="{{ route('clients.index') }}">All clients</a></li>
+                        <li><i class="fa fa-plus-square"></i><a href="{{ route('clients.create') }}">Add a new client</a></li>
                     </ul>
                 </li>
 

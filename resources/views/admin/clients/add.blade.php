@@ -34,16 +34,13 @@
                         <strong>Add a client</strong>
                     </div>
                     <div class="card-body card-block">
-                        {!! Form::open(['url' => url('/clients/add'), 'method' => 'post']) !!}
+                        {!! Form::open(['url' => route('clients.store'), 'method' => 'post']) !!}
                             {!! Form::hidden('status', 1) !!}
                             @include('admin.clients.form')
-                    {!! Form::close() !!}
+                        {!! Form::close() !!}
                     </div>
-
                 </div>
             </div>
-
-
 
             <div class="col-lg-4" >
                 <div class="card" style="height: 553px;">
