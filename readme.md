@@ -1,4 +1,4 @@
-##Install project:
+## Install project:
 - Download composer https://getcomposer.org/download/
 - Download NodeJs https://nodejs.org/en/download/
 - Pull Laravel/php project from git provider.
@@ -12,6 +12,6 @@
 - Run `php artisan db:seed`
 - Run `php artisan serve`
 
-#####You can now access your project at localhost:8000 :)
+##### You can now access your project at localhost:8000 :)
 
 
